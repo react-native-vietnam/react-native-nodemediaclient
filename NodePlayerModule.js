@@ -64,7 +64,7 @@ class NodePlayerView extends PureComponent<Props> {
     return (
       <RCTNodePlayer
         {...this.props}
-        ref={RCT_VIDEO_REF}
+        ref={this.videoRef}
         onChange={this._onChange.bind(this)}
       />
     )
