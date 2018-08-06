@@ -1,11 +1,19 @@
 {
   "name": "react-native-nodemediaclient",
-  "version": "0.1.2",
-  "description": "",
+  "version": "0.1.3",
+  "description": "React Native RTMP node media client",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Mingliang Chen",
-  "license": ""
+  "license": "MIT",
+  "peerDependencies": {
+    "react": ">= 16.4.1",
+    "react-native": ">= 0.56.0",
+    "fbjs": "*"
+  },
+  "devDependencies": {
+    "flow-bin": "^0.78.0"
+  }
 }

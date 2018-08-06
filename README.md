@@ -1,4 +1,5 @@
 # react-native-nodemediaclient
+
 [![npm](https://img.shields.io/npm/v/react-native-nodemediaclient.svg)](https://www.npmjs.com/package/react-native-nodemediaclient)
 [![npm](https://img.shields.io/npm/dm/react-native-nodemediaclient.svg)](https://www.npmjs.com/package/react-native-nodemediaclient)  
 This project is the react-native packaging of NodeMediaClient-Android and NodeMediaClient-iOS SDK.
@@ -6,15 +7,19 @@ Complete live publish and play functions, providing the exact same API call. You
 [中文介绍](https://github.com/NodeMedia/react-native-nodemediaclient/blob/master/README_CN.md)
 
 ## 1.install
+
 yarn add react-native-nodemediaclient
 
 ## 2.link
+
 react-native link
 
-## 3.Manually modify
+## 3.Manually Installation
 
 ### Android
-android/build.gradle
+
+`android/build.gradle`
+
 ```
 allprojects {
     repositories {
@@ -24,17 +29,17 @@ allprojects {
             // All of React Native (JS, Obj-C sources, Android binaries) is installed from npm
             url "$rootDir/../node_modules/react-native/android"
         }
-        
+
         // Add this section
-        maven { 
-            url 'https://jitpack.io' 
-        }
+        maven { url 'https://jitpack.io' }
     }
 }
 ```
 
 ### iOS
+
 ios/Podfile
+
 ```
 # Uncomment the next line to define a global platform for your project
 # platform :ios, '9.0'
@@ -49,20 +54,25 @@ end
 ```
 
 ## 4.install NodeMediaClient-SDK
+
 ### Android
+
 Open and compile the project, Android studio will automatically download and link the library without additional operations.
 
 ### iOS
+
 ```
 cd ios
 pod install
 ```
-Open the QLive.xcworkspace and compile the project 
+
+Open the QLive.xcworkspace and compile the project
 
 ## 5.permission
 
 ### Android
-```  
+
+```
     <uses-feature android:name="android.hardware.camera"/>
     <uses-feature android:name="android.hardware.camera.autofocus"/>
 
@@ -73,6 +83,7 @@ Open the QLive.xcworkspace and compile the project
 ```
 
 ### iOS
+
 Project -> Info
 
 ```
@@ -89,7 +100,7 @@ import {  NodePlayerView } from 'react-native-nodemediaclient';
 
 ......
 
-<NodePlayerView 
+<NodePlayerView
   style={{ height: 200 }}
   ref={(vp) => { this.vp = vp }}
   inputUrl={"rtmp://192.168.0.10/live/stream"}
@@ -100,14 +111,14 @@ import {  NodePlayerView } from 'react-native-nodemediaclient';
 />
 ```
 
-
 ### NodeCameraView
+
 ```
 import {  NodeCameraView } from 'react-native-nodemediaclient';
 
 ......
 
-<NodeCameraView 
+<NodeCameraView
   style={{ height: 400 }}
   ref={(vb) => { this.vb = vb }}
   outputUrl = {"rtmp://192.168.0.10/live/stream"}
@@ -133,5 +144,6 @@ import {  NodeCameraView } from 'react-native-nodemediaclient';
 ```
 
 ## Demo project
+
 ![img](https://raw.githubusercontent.com/NodeMedia/iShow-RN/master/1519740855033.gif)
 https://github.com/NodeMedia/iShow-RN
